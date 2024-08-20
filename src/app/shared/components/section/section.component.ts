@@ -5,11 +5,11 @@ import {
   transferArrayItem,
   CdkDrag,
   CdkDropList,
-} from '@angular/cdk/drag-drop'; import { SubHeaderComponent } from './sub-header.component';
-import { CardComponent } from './card.component';
-import { CardHeaderComponent } from './card-header.component';
-import { NewCardComponent } from './new-card.component';
-import { Task } from './types/task.type';
+} from '@angular/cdk/drag-drop'; import { SubHeaderComponent } from '../sub-header/sub-header.component';
+import { Task } from '../../../types/task.type';
+import { CardHeaderComponent } from '../card-header/card-header.component';
+import { CardComponent } from '../card/card.component';
+import { NewCardComponent } from '../new-card/new-card.component';
 
 @Component({
   selector: 'app-section',

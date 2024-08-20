@@ -7,3 +7,9 @@ export type Task = {
     title: string,
     description: string,
 }
+
+export type TaskState = { tasks: Task[]; }
+
+export const initialState: TaskState = {
+  tasks: []
+};
