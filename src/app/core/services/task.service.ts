@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable, catchError, delay, distinctUntilChanged, map, take, throwError } from "rxjs";
-import { Task, Response, GroupedTasks, StatusTask, User } from "../../shared/types/task.type";
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { BehaviorSubject, Observable, catchError, take, } from "rxjs";
+import { Task, GroupedTasks, StatusTask, User } from "../../shared/types/task.type";
+import { HttpClient, } from '@angular/common/http';
 import { environment } from "../../../environments/environment.development";
 import { ToastrService } from 'ngx-toastr';
 import { Router } from "@angular/router";

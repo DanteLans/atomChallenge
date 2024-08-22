@@ -10,13 +10,19 @@ export const routes: Routes = [
         title: 'Home'
     },
     {
-        path: '',
+        path: 'login',
         pathMatch: 'full',
         loadComponent: () => import('./features/login/login.component').then(mod => mod.LoginComponent),
         title:'Login'
     },
     {
         path: '**',
+        loadComponent: () => import('./features/login/login.component').then(mod => mod.LoginComponent),
+        title:'Login'
+    },
+    {
+        path: '',
+        pathMatch: 'full',
         loadComponent: () => import('./features/login/login.component').then(mod => mod.LoginComponent),
         title:'Login'
     }

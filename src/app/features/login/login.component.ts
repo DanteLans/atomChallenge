@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
   constructor(private service: TaskStore, private intro: IntroService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(this.route)
     this.service.userState({} as User);
   }
 
