@@ -12,7 +12,7 @@
         let first = $first, last =$last) {
         @if (first) {
         <div class="mt-5 md:mt-8" cdkDrag [cdkDragData]="item" >
-          <app-card [item]="item"></app-card>
+          <app-card [item]="item" [id]="idList + '-1'"></app-card>
         </div>
         }
         @else {

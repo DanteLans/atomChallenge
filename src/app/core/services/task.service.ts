@@ -36,6 +36,9 @@ export class TaskStore {
         },
         complete: () => {
           this._loading.next(false);
+        },
+        error: () => {
+          this._loading.next(false);
         }
       });
   }
@@ -107,7 +110,7 @@ export class TaskStore {
       })
   }
 
-  getUser(user: User): void {
+  getUser(user: User, tour?: boolean): void {
     this._loading.next(true);
     this.http.get<User>(environment.apiUrl + environment.getUser(user.email))
       .pipe(take(1))
@@ -122,18 +125,18 @@ export class TaskStore {
         error: (e) => {
           this._loading.next(false);
           this.toastr.error('Usuario no encontrado!');
-          this.createUser(user);
+          this.createUser(user, tour);
         },
         complete: () => {
           this._loading.next(false);
           this.userState(user as User);
           this.toastr.success('Usuario encontrado!');
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home'], { queryParams: {tour}});
         }
       })
   }
 
-  createUser(user: Pick<User, 'email'>): void {
+  createUser(user: Pick<User, 'email'>, tour?: boolean): void {
     this._loading.next(true);
     this.http.post(environment.apiUrl + environment.users, { email: user.email })
       .pipe(take(1))
@@ -151,7 +154,7 @@ export class TaskStore {
           this._loading.next(false);
           this.userState(user as User);
           this.toastr.success('Usuario creado!');
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home'], { queryParams: {tour}});
         }
       })
   }

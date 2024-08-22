@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    apiUrl: 'http://127.0.0.1:5001/fir-api-e9d5f/us-central1/app/',
+    apiUrl: 'https://us-central1-fir-api-e9d5f.cloudfunctions.net/app/',
     taskList: 'tasks',
     users: 'users',
     updateTask:(id: string) => `tasks/${id}`,

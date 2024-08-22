@@ -9,6 +9,6 @@ import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes), provideHttpClient(), provideAnimations(),
-  provideToastr({maxOpened: 2, autoDismiss: true,  timeOut: 1500})],
+  provideToastr({maxOpened: 2, autoDismiss: true,  timeOut: 2500})],
 
 };

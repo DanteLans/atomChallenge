@@ -1,11 +1,11 @@
 <div (click)="editTask()" class="bg-[#F4F4F4] rounded-xl flex flex-col items-center mx-auto min-w-72 max-w-96 pl-4 pr-4 pt-4 pb-3 md:pb-4">
-  <p class="text-[#000000] font-normal text-sm leading-6 mr-auto mt-1 md:text-lg underline decoration-solid ">
+  <p class="text-[#000000] font-normal text-sm leading-6 mr-auto mt-1 md:text-lg underline decoration-solid" id="card-title">
     {{ item.title }}
   </p>
-  <p class="text-[#000000] font-normal text-xs leading-4 mr-auto md:text-base mt-1">
+  <p class="text-[#000000] font-normal text-xs leading-4 mr-auto md:text-base mt-1" id="card-description">
     {{ item.description }}
   </p>
-  <p class="text-[#000000] font-normal text-xs leading-4 opacity-20 mr-auto mt-3 md:text-base">
+  <p class="text-[#000000] font-normal text-xs leading-4 opacity-20 mr-auto mt-3 md:text-base" id="card-date">
     Created : {{ item | customDate | date: 'medium'}}
   </p>
 </div>
