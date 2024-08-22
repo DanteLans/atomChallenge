@@ -1,0 +1,49 @@
+<div class="container max-w-screen-lg mx-auto">
+  <form [formGroup]="taskForm">
+    <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+      <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+        <div class="text-gray-600">
+          <p class="font-medium text-lg">Task Details</p>
+          <p>Please fill out all the fields.</p>
+        </div>
+
+        <div class="lg:col-span-2">
+          <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+            <div class="md:col-span-5">
+              <label for="title">Tittle</label>
+              <input formControlName="title" type="text" name="title"
+                class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+            </div>
+
+            <div class="md:col-span-5">
+              <label for="description">Description</label>
+              <textarea formControlName="description" rows="6" type="text" name="description"
+                class="h-fit border mt-1 rounded px-4 w-full bg-gray-50" value=""></textarea>
+            </div>
+
+            <div class="md:col-span-5">
+              <div class="inline-flex items-center" [ngClass]="{ 'disabled-div':taskForm.controls.status.disabled}">
+                <input type="checkbox" formControlName="status" name="status" class="form-checkbox" />
+                <label for="status" class="ml-2">Is the task completed?</label>
+              </div>
+            </div>
+            <div class="md:col-span-5 text-right">
+              <div class="inline-flex items-end" [ngClass]="{ 'mr-3':!this.data.isNewTask}">
+                <button [disabled]="!taskForm.valid" (click)="saveTask()"
+                  class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">{{data.isNewTask?
+                  'Create': 'Update'}}</button>
+              </div>
+              @if (!this.data.isNewTask) {
+              <div class="inline-flex items-end">
+                <button (click)="deleteTask()"
+                  class="bg-red-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Delete</button>
+              </div>
+              }
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

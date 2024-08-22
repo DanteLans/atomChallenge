@@ -1,13 +1,16 @@
 <div class="w-full flex flex-col md:flex-row">
-    <p class="text-[#000000] font-medium text-sm md:text-4xl leading-4">Brackets</p>
-    <div class="w-full flex flex-row items-center mt-1.5 md:ml-8">
-      <div class="bg-[url('./../assets/like.svg')] bg-cover	h-4 w-4  mr-1.5 md:h-6 md:w-6"></div>
-      <div class="border-l-[1px] w-[1px] h-6 mr-1.5"></div>
-      <div class="flex flex-row justify-items-start items-center  mr-1.5">
-        <div class="bg-[url('./../assets/world.svg')] bg-cover	h-4 w-4  md:h-6 md:w-6"></div>
-        <p class="font-normal text-sm leading-6 opacity-20 ml-[2px] md:text-xl">Public</p>
-      </div>
-      <div class="border-l-[1px] w-[1px] h-6  mr-1.5"></div>
-      <div class="bg-[url('./../assets/box.svg')] bg-cover	h-4 w-4  md:h-6 md:w-6"></div>
+  <p class="text-[#000000] font-medium text-sm md:text-4xl leading-4">Atom</p>
+  <div class="w-full flex flex-row items-center mt-1.5 md:ml-8">
+    <button (click)="addNewTask()"
+      class="flex items-center justify-center px-1 py-1 bg-[#ffb887] rounded-md">
+      <div class="bg-[url('./../assets/new-window-svgrepo-com.svg')] bg-cover	h-4 w-4 md:h-6 md:w-6"></div>
+    </button>
+    <div class="border-l-[1px] w-[1px] h-6 mr-1.5"></div>
+    <div class="flex flex-row justify-items-start items-center  mr-1.5">
+      <div class="bg-[url('./../assets/world.svg')] bg-cover	h-4 w-4  md:h-6 md:w-6"></div>
+      <p class="font-normal text-sm leading-6 opacity-20 ml-[2px] md:text-xl">Public</p>
     </div>
+    <div class="border-l-[1px] w-[1px] h-6  mr-1.5"></div>
+    <div class="bg-[url('./../assets/box.svg')] bg-cover	h-4 w-4  md:h-6 md:w-6"></div>
   </div>
+</div>

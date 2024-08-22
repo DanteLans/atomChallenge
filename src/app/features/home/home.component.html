@@ -5,8 +5,8 @@
     </div>
   </div>
   <div class="flex flex-row overflow-x-auto md:mt-5 pb-6">
-    <app-section title="To do" [data]="todo" idList="todo"></app-section>
-    <app-section title="In progress" [data]="inprogress" idList="progress"></app-section>
-    <app-section title="In QA" [data]="inqa" idList="qa"></app-section>
-    <app-section title="Done" [data]="indone" idList="done"></app-section>
+    <app-section title="To do" [data]="data.todo" idList="todo"></app-section>
+    <app-section title="In progress" [data]="data.inprogress" idList="inprogress"></app-section>
+    <app-section title="In QA" [data]="data.qa" idList="qa"></app-section>
+    <app-section title="Done" [data]="data.done" idList="done"></app-section>
   </div>

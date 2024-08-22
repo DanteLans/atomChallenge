@@ -6,24 +6,32 @@
           <app-card-header [title]="title"></app-card-header>
         </div>
       </div>
-      <div class="list" id="{{idList}}" cdkDropList [cdkDropListConnectedTo]="['todo', 'qa', 'progress', 'done']"
+      <div class="list min-h-32 min-w-40" id="{{idList}}" cdkDropList [cdkDropListConnectedTo]="['todo', 'qa', 'inprogress', 'done']"
         [cdkDropListData]="data" (cdkDropListDropped)="drop($event)">
-        @for (item of data; track item.dateCreated;
+        @for (item of data; track item.id;
         let first = $first, last =$last) {
         @if (first) {
-        <div class="mt-5 md:mt-8" cdkDrag>
+        <div class="mt-5 md:mt-8" cdkDrag [cdkDragData]="item" >
           <app-card [item]="item"></app-card>
         </div>
         }
         @else {
-        <div class="mt-2.5 md:mt-3" cdkDrag>
+        <div class="mt-2.5 md:mt-3" cdkDrag [cdkDragData]="item">
           <app-card [item]="item"></app-card>
         </div>
         }
+        }@empty {
+          <div class="bg-[#F4F4F4] rounded-xl flex flex-col items-center justify-center  min-w-72 max-w-96 min-h-60 pl-4 pr-4 pt-4 pb-3 md:pb-4 mt-5 md:mt-8 opacity-40">
+            <p class="text-[#000000] font-normal text-xs leading-4 md:text-base mt-1">
+              Mueve tus elementos aca
+            </p>
+          </div>
         }
-        <div class="mt-3 md:mt-3">
-          <app-new-card></app-new-card>
-        </div>
+        @if (idList === 'todo') {
+          <div class="mt-3 md:mt-3">
+            <app-new-card></app-new-card>
+          </div>
+          }
       </div>
     </div>
   </div>
