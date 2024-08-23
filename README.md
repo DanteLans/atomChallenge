@@ -12,7 +12,6 @@
 Esta es una aplicación de gestión de tareas que permite a los usuarios crear, actualizar, eliminar y marcar tareas como completadas. Los usuarios pueden iniciar sesión utilizando su correo electrónico y sus tareas se almacenarán y organizarán según la fecha de creación.
 
 ## Estructura del proyecto
-Aquí tienes el mapa de archivos con el formato adecuado:
 
 ```
 angular-task-list/
