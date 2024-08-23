@@ -1,27 +1,55 @@
-# Tasklist
+# Atom Challenge
+# Task Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+![Angular](https://img.shields.io/badge/angular-17-red?logo=angular) ![TypeScript](https://img.shields.io/badge/typescript-5.4.2-blue?logo=typescript) ![RxJS](https://img.shields.io/badge/rxjs-7.8-purple?logo=reactivex) ![Firebase](https://img.shields.io/badge/firebase-Firestore-yellow?logo=firebase) ![Node.js](https://img.shields.io/badge/node.js-18-green?logo=node.js) ![Express.js](https://img.shields.io/badge/express.js-4.19-lightgrey?logo=express) ![License](https://img.shields.io/badge/license-MIT-brightgreen)
 
-## Development server
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://shields.io/)
+[![Last Commit](https://img.shields.io/github/last-commit/DanteLans/atomChallenge)](https://shields.io/)
+[![Issues](https://img.shields.io/github/issues/DanteLans/atomChallenge)](https://shields.io/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Esta es una aplicación de gestión de tareas que permite a los usuarios crear, actualizar, eliminar y marcar tareas como completadas. Los usuarios pueden iniciar sesión utilizando su correo electrónico y sus tareas se almacenarán y organizarán según la fecha de creación.
 
-## Build
+## Estructura del proyecto
+Aquí tienes el mapa de archivos con el formato adecuado:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+angular-task-list/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── services/
+│   │   │   ├── guards/
+│   │   │   └── pipes/
+│   │   ├── features/
+│   │   │   ├── home/
+│   │   │   ├── login/
+│   │   ├── shared/
+│   │   │   ├── components/
+│   │   │   │   ├── card/
+│   │   │   │   ├── card-header/
+│   │   │   │   ├── header/
+│   │   │   │   ├── loading/
+│   │   │   │   ├── section/
+│   │   │   │   └── sub-header/
+│   │   │   └── types/
+│   ├── assets/
+│   ├── environments/
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── styles.scss
+│   └── index.html
+├── angular.json
+├── package.json
+└── README.md
+```
 
-## Running unit tests
+## Accessing the Application
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can access the application via the following URLs:
 
-## Running end-to-end tests
+- **Main Site**: [https://fir-api-e9d5f.firebaseapp.com/](https://fir-api-e9d5f.firebaseapp.com/)
+- **Interactive Tour**: [https://fir-api-e9d5f.firebaseapp.com/?tour=true](https://fir-api-e9d5f.firebaseapp.com/?tour=true)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The interactive tour provides a guided walkthrough of the application's features and functionality.
