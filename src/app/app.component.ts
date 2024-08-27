@@ -6,6 +6,7 @@ import {Dialog} from '@angular/cdk/dialog';
 import { TaskStore } from './core/services/task.service';
 import { LoginComponent } from "./features/login/login.component";
 import { TaskFormComponent } from "./shared/components/task-form/task-form.component";
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.loadingState$
+    .pipe(takeUntilDestroyed())
     .subscribe((value) => {
       if(value) {
         this.openLoading();
